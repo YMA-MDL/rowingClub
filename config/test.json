@@ -1,4 +1,4 @@
 {
     "DBHost": "mongodb://localhost/",
-    "DBinstance": "activitiesAPI_test"
+    "DBinstance": "sports_test"
 }
