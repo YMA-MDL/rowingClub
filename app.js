@@ -21,7 +21,7 @@ const app = express()
 // app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
 
@@ -37,7 +37,9 @@ if (config.util.getEnv('NODE_ENV') !== 'test') {
 app.use(bodyParser.json())
 
 // serve static documentation
-app.use(express.static('public'));
+app.use(express.static('client'));
+app.use(express.static('assets'));
+app.use(express.static('bower_components'));
 app.use('/api/help/doc', express.static('api/apidoc'));
 
 // Routes usage
